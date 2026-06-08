@@ -1,4 +1,4 @@
-# 🏥 Hospital Management System
+#  Hospital Management System
 ### 24f2007_HMS — Full-Stack Flask + Vanilla JS Web Application
 
 [![Python](https://img.shields.io/badge/Python-3.10+-3776AB?logo=python&logoColor=white)](https://python.org)
@@ -10,7 +10,7 @@
 
 ---
 
-## 📖 Overview
+##  Overview
 
 A production-grade **Hospital Management System** built as a Single Page Application (SPA). It provides role-based dashboards for **Administrators**, **Doctors**, and **Patients** — enabling seamless appointment management, digital treatment records, automated email reminders, and monthly reporting.
 
@@ -18,27 +18,27 @@ A production-grade **Hospital Management System** built as a Single Page Applica
 
 ---
 
-## ✨ Features at a Glance
+##  Features at a Glance
 
 | Role | Capabilities |
 |---|---|
-| 🔑 **Admin** | Manage doctors & patients, view all appointments, trigger reminders, generate reports |
-| 🩺 **Doctor** | View schedule, set availability, record diagnoses & prescriptions, download monthly report |
-| 🏥 **Patient** | Book appointments, view treatment history, cancel visits, export health records |
+|  **Admin** | Manage doctors & patients, view all appointments, trigger reminders, generate reports |
+|  **Doctor** | View schedule, set availability, record diagnoses & prescriptions, download monthly report |
+|  **Patient** | Book appointments, view treatment history, cancel visits, export health records |
 
 ### Core Highlights
-- ✅ **JWT Authentication** — stateless, role-aware, token-based auth
-- ✅ **Real-time Slot Management** — DB-level unique constraint prevents double-booking
-- ✅ **Automated Reminders** — Celery + Redis sends daily appointment emails
-- ✅ **Monthly Reports** — auto-generated and emailed to admin on schedule
-- ✅ **Smart Caching** — Redis-backed cache for dashboard stats (auto-invalidated on writes)
-- ✅ **Auto-expiry** — past `booked` appointments automatically transition to `expired`
-- ✅ **Export** — Patients can export their treatment history as downloadable files
-- ✅ **SPA Frontend** — Zero-reload experience via hash-based client-side routing
+- **JWT Authentication** — stateless, role-aware, token-based auth
+- **Real-time Slot Management** — DB-level unique constraint prevents double-booking
+- **Automated Reminders** — Celery + Redis sends daily appointment emails
+- **Monthly Reports** — auto-generated and emailed to admin on schedule
+- **Smart Caching** — Redis-backed cache for dashboard stats (auto-invalidated on writes)
+- **Auto-expiry** — past `booked` appointments automatically transition to `expired`
+- **Export** — Patients can export their treatment history as downloadable files
+- **SPA Frontend** — Zero-reload experience via hash-based client-side routing
 
 ---
 
-## 🚀 Quick Start
+##   Start
 
 ### Prerequisites
 
@@ -113,9 +113,9 @@ celery -A backend.celery_app.celery beat --loglevel=info
 
 ---
 
-## 🔐 Default Credentials
+##  Default Credentials
 
-> ⚠️ Change these immediately in a production environment!
+>  Change these immediately in a production environment!
 
 | Role | Username | Password |
 |---|---|---|
@@ -167,7 +167,7 @@ celery -A backend.celery_app.celery beat --loglevel=info
 
 ---
 
-## 🗄️ Database Schema (ER Summary)
+##  Database Schema (ER Summary)
 
 ```
 users ──1:1── doctors ──M:1── departments
@@ -183,7 +183,7 @@ doctors ──1:M── doctor_availability
 
 ---
 
-## 🌐 API Endpoints Summary
+##  API Endpoints Summary
 
 ### Auth (`/api/auth`)
 | Method | Endpoint | Description |
@@ -233,7 +233,7 @@ doctors ──1:M── doctor_availability
 
 ---
 
-## ⚙️ Background Tasks
+##  Background Tasks
 
 | Task | Trigger | Description |
 |---|---|---|
@@ -248,7 +248,7 @@ python trigger_tasks.py
 
 ---
 
-## 🔒 Security Notes
+##  Security Notes
 
 - Passwords hashed with **PBKDF2-SHA256** (Werkzeug)
 - JWT signed and validated server-side on every protected request
@@ -257,7 +257,7 @@ python trigger_tasks.py
 
 ---
 
-## 🧪 Testing the Application
+##  Testing the Application
 
 ### 1. Login as Admin
 - URL: `http://localhost:5000`
@@ -280,7 +280,7 @@ python trigger_tasks.py
 
 ---
 
-## 📦 Dependencies
+##  Dependencies
 
 ```
 Flask==3.0.0
@@ -301,7 +301,7 @@ pip install -r requirements.txt
 
 ---
 
-## 🏭 Production Deployment
+##  Production Deployment
 
 ```bash
 # 1. Use PostgreSQL
@@ -327,7 +327,7 @@ celery -A backend.celery_app.celery beat -D
 
 ---
 
-## 📄 Documentation
+##  Documentation
 
 | Document | Description |
 |---|---|
@@ -337,12 +337,5 @@ celery -A backend.celery_app.celery beat -D
 
 ---
 
-## 👤 Author
 
-**Student ID:** 24f2007  
-**Project:** IIT Madras BS — Application Development II  
-**Stack:** Flask · SQLAlchemy · JWT · Celery · Redis · Vanilla JS
 
----
-
-*Built with ❤️ for the IIT Madras BS Program*
